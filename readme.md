@@ -15,27 +15,21 @@ Los movimientos permitidos:
 
 | movement   |       element       |  stack |
 |:----------:|:-------------------:|:------:|
+| swap                                      |
 | sa         | intercambia 1º y 2º | A      |
 | sb         | intercambia 1º y 2º | B      |
 | ss         | intercambia 1º y 2º | A y B  |
-
-
-
-```swap
-`sa`    Intercambia 1º y 2º elemento        		pila `A`
-`sb`    Intercambia 1º y 2º elemento       			pila `B`
-`ss`    Intercambia 1º y 2º elemento       		 	pila `A` y `B` al mismo tiempo
-```push
-`pa`    Mueve       1º elemento         	  	  	pila `B` a la pila `A`
-`pb`    Mueve       1º elemento         	    	pila `A` a la pila `B`
-```rotate
-`ra`    Rota        1º elemento al final    		pila `A`
-`rb`    Rota        1º elemento al final    		pila `B`
-`rr`    Rota        1º elemento al final    		pila `A` y `B` al mismo tiempo
-```reverse rotate
-`rra`    Rota        ultimo elemento al principio    pila `A`
-`rrb`    Rota        ultimo elemento al principio 	pila `B`
-`rrr`    Rota        ultimo elemento al principio 	pila `A` y `B` al mismo tiempo
+| push                                      |
+| pa         | mueve 1º arriba de B| A a B  |
+| pb         | intercambia 1º y 2º | B a A  |
+| rotate                                    |
+| ra         | rota 1º al final    | A      |
+| rb         | rota 1º al final    | B      |
+| rs         | rota 1º al final    | A y B  |
+| rotate reverse                            |
+| rra         | rota Ultimo al 1º  | A      |
+| rrb         | rota Ultimo al 1º  | B      |
+| rrs         | rota Ultimo al 1º  | A y B  |
 
 La proyecto contiene:
 *	`Pila A` 	Donde se ralizan la mayoria de las operaciones.
@@ -43,8 +37,8 @@ La proyecto contiene:
 
 ### Archivos
 
-* `1. push_swap.c`	Contendrá la lógica principal del programa. Aquí se implementa el algoritma de clasificación y se maneja la `entrada` y la `salida`.
-* `2. push_swap.h`	Encabezado con las declaraciones de las funciones y estructuras.
+* `1. push_swap.c`	Contendrá la lógica principal del programa. Aquí se implementa el algoritma de clasificación y se maneja la *entrada* y la *salida*.
+* `2. push_swap.h	Encabezado con las declaraciones de las funciones y estructuras.
 * `3. stack.c`		Funciones relacionadas con la manipulación de la pila, inicialización, agregar elementos, quitar elementos y verificar si está vacía o llena.
 * `4. operations.c`	Implementación de los movimientos permitidos en las pilas: swap, push, rotate y reverse rotate. 
 * `5. sorting.c`	Implementación del algoritmo de clasificación. 
