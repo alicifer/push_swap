@@ -13,6 +13,14 @@ El proyecto se puede enfocar en varias partes: la lógica de ordenación, el man
 El algoritmo debe tener en cuenta el número de elementos a ordenar y la complejidad para minimizar el número de pasos para ordenar la lista.
 Los movimientos permitidos:
 
+| movement   |       element       |  stack |
+|:----------:|:-------------------:|:------:|
+| sa         | intercambia 1º y 2º | A      |
+| sb         | intercambia 1º y 2º | B      |
+| ss         | intercambia 1º y 2º | A y B  |
+
+
+
 ```swap
 `sa`    Intercambia 1º y 2º elemento        		pila `A`
 `sb`    Intercambia 1º y 2º elemento       			pila `B`
