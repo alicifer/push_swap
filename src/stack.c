@@ -24,7 +24,9 @@ t_stack	*ft_new_node(int value, int len)
 	new_node->index = -1;
 	new_node->next = NULL;
 	new_node->target_pos = -1;
-	new_node->cost_total = -27;
+	new_node->cost_total = -1;
+	new_node->pos = -1;
+	new_node->cost = -27;
 	return (new_node);
 }
 

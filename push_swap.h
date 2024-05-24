@@ -23,13 +23,7 @@
  * pos: the current position in its stack
  * target_pos: for elements in stack B, the target pos in stack A 
  * where it should be
- * cost_a: how many actions it would cost to rotate stack A 
- * so that the element at the target position gets to the 
- * top of stack A
- * cost_b: haw many actions it would cost to rotate stack B 
- * so that the element at the target position gets to the 
- * top of stack B
- */
+  */
 typedef struct s_stack
 {
 	int				value;
