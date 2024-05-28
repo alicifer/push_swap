@@ -82,3 +82,19 @@ int	*args_to_intarray(char *s)
 	int_array = split_to_intarray(split);
 	return (int_array);
 }
+
+void print_stack(t_stack *stack, char *msg)
+{	
+	t_stack	*temp;
+
+	temp = stack;
+	ft_printf("===========================================================================\n");
+	ft_printf("====%s===\n", msg);
+
+	while (temp)
+	{
+		ft_printf("Value: %d\tIndex: %d\tTaget_pos: %d\tPos: %d\tCost: %d\tCost_total: %d\n", temp->value, temp->index, temp->target_pos, temp->pos, temp->cost, temp->cost_total);
+		temp = temp->next;
+	}
+	ft_printf("===========================================================================\n");
+}

@@ -69,6 +69,9 @@ char		**args_to_string(char *s);
  */
 int			*split_to_intarray(char **s);
 int			*args_to_intarray(char *s);
+int			*split_to_intarray(char **s);
+int			*args_to_intarray(char *s);
+void		print_stack(t_stack *stack, char *msg);
 //	--------------------checkargs.c--------------
 int			check_dup(int *array);
 int			ft_atoi_err(char **s, int index);

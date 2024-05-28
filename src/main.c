@@ -11,13 +11,64 @@
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
-/*void	check_leaks(void)
+int	main(int argc, char **argv)
 {
-	system("leaks a.out");
+	int		*array;
+	t_stack	*a;
+	t_stack *b;
+
+	array = check_all_args(argc, argv);
+	a = fill_stack(array);
+	if (stack_len(a) < 3)
+	{
+		if (stack_check_order(a) == 1)
+		{
+			free_stack(a);
+			exit (0);
+		}
+		else if (stack_len(a) == 2)
+		{
+			move_sa(&a);
+			free_stack(a);
+			exit (0);
+		}
+	}
+	b = NULL;
+	put_index(a);
+//	print_stack(a, "STACK A - principio");
+//	print_stack(b, "STACK B - Principio");
+	if (stack_len(a) >= 3)
+		push_all_to_b(&a, &b);
+	sort_three(&a);
+	do_sorting(&a, &b);
+	//print_stack(a, "STACK A - MEDIO");
+	if (stack_check_order(a) == 1 && b == NULL)
+	{	
+		free_stack(a);
+		free_stack(b);
+		return (0);
+	}	
+	else
+		final_sort(&a);
+
+	
+	if ((stack_check_order(a) == 1 && b == NULL))
+		printf("//////////// ORDENADO \\\\\\\\\\\\");
+	else
+		printf("//////////// NO ORDENADO \\\\\\\\\\\\");
+
+	print_stack(a, "STACK A - FINAL");
+	print_stack(b, "STACK B - FINAL");
+	free_stack(b);
+	free_stack(a);
+	return (0);	
 }
 
-int	main(int argc, char **argv)
+
+
+
+
+/*int	main(int argc, char **argv)
 {
 	int		*array;
 	t_stack *a;
