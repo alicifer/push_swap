@@ -16,7 +16,7 @@ t_stack	*find_lowest_cost(t_stack **stack_b)
 			lowest = b;
 		b = b->next;
 	}
-	printf("\nLowest cost value: %d\n", lowest->value);
+	//printf("\nLowest cost value: %d\n", lowest->value);
 	return (lowest);
 }
 
@@ -58,12 +58,9 @@ void	do_move(t_stack **stack_a, t_stack **stack_b)
 		move_rb(stack_b, lowest_node);
 	if (target_node->cost == 0 &&  lowest_node->cost < 0)
 		move_rrb(stack_b, lowest_node);
-	printf("estoy atrapado en este bucle");
-
-
 	if (target_node->cost == 0 &&  lowest_node->cost == 0)
 		move_pa(stack_a, stack_b);
-	printf("DO_MOVE TARGET POS: %d	target pos cost:%d LOWEST VALUE: %d 	lowest cost: %d", target_node->pos, target_node->cost, lowest_node->value, lowest_node->cost);
+	//printf("DO_MOVE TARGET POS: %d	target pos cost:%d LOWEST VALUE: %d 	lowest cost: %d", target_node->pos, target_node->cost, lowest_node->value, lowest_node->cost);
 	return ;
 }
 
@@ -84,7 +81,7 @@ void do_sorting(t_stack **stack_a, t_stack **stack_b)
 		put_total_cost(stack_a, stack_b);
 		do_move(stack_a, stack_b);
 	}
-    printf("///////////////////////////////////////////////////////\n");
-	print_stack(*stack_a,"********* stack A - DO SORTING ******************");
-	print_stack(*stack_b,"********* stack B - DO SORTING ******************");
+   // printf("///////////////////////////////////////////////////////\n");
+	//print_stack(*stack_a,"********* stack A - DO SORTING ******************");
+	//print_stack(*stack_b,"********* stack B - DO SORTING ******************");
 }

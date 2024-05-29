@@ -27,13 +27,13 @@ void	sort_three(t_stack **a)
 				&& (*tmp)->value > (*tmp)->next->next->value)
 			{
 				rotate(a);
-				printf("ra\n");
+				ft_printf("ra\n");
 			}
 			else if ((*tmp)->next->value > (*tmp)->value
 				&& (*tmp)->next->value > (*tmp)->next->next->value)
 			{
 				rev_rotate(a);
-				printf("rra\n");
+				ft_printf("rra\n");
 			}
 			else if ((*tmp)->value > (*tmp)->next->value)
 				move_sa(tmp);
@@ -83,7 +83,7 @@ void	push_all_to_b(t_stack **a, t_stack **b)
 		else
 		{
 			rotate(a);
-			printf("ra\n");
+			ft_printf("ra\n");
 		}
 	}
 	while (stack_len(*a) > 3)  
@@ -110,7 +110,7 @@ int	find_smallest(t_stack **stack)
 		}
 		aux = aux->next;
 	}
-	printf("-----------------------find smallest in b_pos: %d\n", position);
+	//printf("-----------------------find smallest in b_pos: %d\n", position);
 	return (position);
 }
 

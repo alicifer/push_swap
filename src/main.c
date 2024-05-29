@@ -52,13 +52,13 @@ int	main(int argc, char **argv)
 		final_sort(&a);
 
 	
-	if ((stack_check_order(a) == 1 && b == NULL))
+	/*if ((stack_check_order(a) == 1 && b == NULL))
 		printf("//////////// ORDENADO \\\\\\\\\\\\\n");
 	else
 		printf("//////////// NO ORDENADO \\\\\\\\\\\\n");
-
-	print_stack(a, "STACK A - FINAL");
-	print_stack(b, "STACK B - FINAL");
+*/
+	//print_stack(a, "STACK A - FINAL");
+	//print_stack(b, "STACK B - FINAL");
 	free_stack(b);
 	free_stack(a);
 	return (0);	

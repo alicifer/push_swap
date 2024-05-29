@@ -27,11 +27,11 @@ void	move_push(t_stack **a, t_stack **b)
 void	move_pa(t_stack **a, t_stack **b)
 {
 	move_push(b, a);
-	printf("pa\n");
+	ft_printf("pa\n");
 }
 
 void	move_pb(t_stack **a, t_stack **b)
 {
 	move_push(a, b);
-	printf("pb\n");
+	ft_printf("pb\n");
 }
