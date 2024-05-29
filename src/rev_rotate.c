@@ -40,7 +40,7 @@ void	rev_rotate(t_stack **stack)
 	temp = get_tail(*stack);
 	newtail = get_node_before_tail(*stack);
 	temp->next = *stack;
-	stack = &temp;
+	*stack = temp;
 	newtail->next = NULL;
 }
 

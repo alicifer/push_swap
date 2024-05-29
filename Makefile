@@ -19,8 +19,8 @@ LIBFT = ./my_libft
 SRC_DIR = src/
 OBJ_DIR = obj/
 
-SRC_FILES = main error utils  stack checkargs swap rev_rotate rotate push sort sort2 makemoves
-
+SRC_FILES = main error utils  stack checkargs swap rev_rotate rotate push sort sort2 makemoves2
+ 
 SRC = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJ = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 

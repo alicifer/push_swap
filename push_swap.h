@@ -134,8 +134,8 @@ void	final_sort(t_stack **a);
 //	------------------makemoves.c--------------
 void 	do_sorting(t_stack **stack_a, t_stack **stack_b);
 t_stack	*find_lowest_cost(t_stack **stack_b);
-void	do_move(t_stack **stack_a, t_stack **stack_b, t_stack *low_cost_node);
-
+//void	do_move(t_stack **stack_a, t_stack **stack_b, t_stack *low_cost_node);
+void	do_move(t_stack **stack_a, t_stack **stack_b);
 
 
 #endif

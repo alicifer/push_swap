@@ -92,6 +92,28 @@ void	push_all_to_b(t_stack **a, t_stack **b)
 	}
 }
 
+int	find_smallest(t_stack **stack)
+{
+	t_stack	*aux;
+	t_stack	*smallest;
+	int		position;
+
+	aux = *stack;
+	smallest = *stack;
+	position = 0;
+	while (aux)
+	{
+		if (smallest->index > aux->index)
+		{
+			position = aux->pos;
+			smallest = aux;
+		}
+		aux = aux->next;
+	}
+	printf("-----------------------find smallest in b_pos: %d\n", position);
+	return (position);
+}
+
 void	put_target_pos(t_stack *stack_a, t_stack *stack_b)
 {
 	t_stack	*target_pos;
@@ -119,23 +141,4 @@ void	put_target_pos(t_stack *stack_a, t_stack *stack_b)
 		b = b->next;
 	}
 }
-int	find_smallest(t_stack **stack)
-{
-	t_stack	*aux;
-	t_stack	*smallest;
-	int		position;
 
-	aux = *stack;
-	smallest = *stack;
-	position = 0;
-	while (aux)
-	{
-		if (smallest->index > aux->index)
-		{
-			position = aux->pos;
-			smallest = aux;
-		}
-		aux = aux->next;
-	}
-	return (position);
-}

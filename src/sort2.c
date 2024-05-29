@@ -22,12 +22,12 @@ void	final_sort(t_stack **a)
 	put_position(*a);
 	tmp = *a;
 	first = tmp;
-	while (tmp->index != 1)
+	while (tmp->next && tmp->index != 1)
 		tmp = tmp->next;
 	first = tmp;
 	printf("--------------sort final.....................\n");
 	printf("first value: %d pos: %d\n ---------------------------\n",first->value, first->pos);
-	while ((*a)->index != 1)
+	while (*a && (*a)->index != 1)
 	{
 		if (first->pos > (len / 2))
 		{

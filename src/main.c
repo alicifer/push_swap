@@ -48,14 +48,14 @@ int	main(int argc, char **argv)
 		free_stack(b);
 		return (0);
 	}	
-	else
+	else if (b == NULL)
 		final_sort(&a);
 
 	
 	if ((stack_check_order(a) == 1 && b == NULL))
-		printf("//////////// ORDENADO \\\\\\\\\\\\");
+		printf("//////////// ORDENADO \\\\\\\\\\\\\n");
 	else
-		printf("//////////// NO ORDENADO \\\\\\\\\\\\");
+		printf("//////////// NO ORDENADO \\\\\\\\\\\\n");
 
 	print_stack(a, "STACK A - FINAL");
 	print_stack(b, "STACK B - FINAL");

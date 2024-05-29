@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-t_stack	*find_lowest_cost(t_stack **stack_b)
+/*t_stack	*find_lowest_cost(t_stack **stack_b)
 {
 	t_stack	*b;
 	t_stack	*lowest;
@@ -27,10 +27,11 @@ t_stack	*find_lowest_cost(t_stack **stack_b)
 			lowest = b;
 		b = b->next;
 	}
+	printf("\nLowest cost value: %d\n", lowest->value);
 	return (lowest);
-}
+}*/
 
-void	do_move(t_stack **stack_a, t_stack **stack_b, t_stack *low_cost_node)
+/*void	do_move(t_stack **stack_a, t_stack **stack_b, t_stack *low_cost_node)
 {
 	t_stack 	*target;
 	int			loop;
@@ -64,12 +65,13 @@ void	do_move(t_stack **stack_a, t_stack **stack_b, t_stack *low_cost_node)
 	if (target->cost == 0 && low_cost_node->cost == 0)
 		move_pa(stack_a, stack_b);
 	return ;
-}
+}*/
+
+/*
 
 void do_sorting(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack	*low_cost_node;
-	t_stack *temp;
 
 	if (!stack_b || !stack_a ||!*stack_a ||!*stack_b)
 		return ;
@@ -84,20 +86,6 @@ void do_sorting(t_stack **stack_a, t_stack **stack_b)
 		low_cost_node = find_lowest_cost(stack_b);
 		do_move(stack_a, stack_b, low_cost_node);
 	}
-	put_index(*stack_a);
-	printf("\n-----------IMPRIMIR LUEGO DE SEND ALL TO B and SORT A ----\n");
-	printf("\n-----------STACK A----------------------------\n");
-	temp = *stack_a;
-	while (temp)
-	{
-		printf("Value: %d	Index: %d	Taget_pos: %d	Pos: %d	Cost: %d		Cost_total: %d\n", temp->value, temp->index, temp->target_pos, temp->pos, temp->cost, temp->cost_total);
-		temp = temp->next;
-	}
-	 printf("\n-----------STACK B----------------------------\n");
-	temp = *stack_b;
-	while (temp)
-	{
-		printf("Value: %d	Index: %d	Taget_pos: %d	Pos: %d	Cost: %d		Cost_total: %d\n", temp->value, temp->index, temp->target_pos, temp->pos, temp->cost, temp->cost_total);
-		temp = temp->next;
-	}
-}
+	print_stack(*stack_a,"********* stack B - DO SORTING ******************");
+	print_stack(*stack_b,"********* stack A - DO SORTING ******************");
+}*/
